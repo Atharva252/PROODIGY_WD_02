@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000; /* Black background for a futuristic feel */
+}
+
+.stopwatch {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Dark shadow */
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(10px); /* Adds a blur effect to give the transparent glass look */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+h1 {
+    color: #00f0ff; /* Futuristic blue color */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.7); /* Glowing text effect */
+}
+
+.display {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00f0ff; /* Futuristic blue */
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.8); /* Glow effect */
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #00f0ff;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.7);
+}
+
+.controls button:hover {
+    transform: scale(1.1); /* Hover effect to grow the button */
+    background-color: #00c0ff; /* Slightly darker blue on hover */
+    box-shadow: 0 8px 20px rgba(0, 240, 255, 0.9); /* Increase glow on hover */
+}
+
+.controls button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(0, 240, 255, 0.2);
+    border-radius: 30px;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.controls button:hover::before {
+    background: rgba(0, 240, 255, 0.4); /* Extra glow on hover */
+}
+
+#reset-btn {
+    background-color: #f44336;
+    box-shadow: 0 4px 15px rgba(244, 67, 54, 0.7);
+}
+
+#reset-btn:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 8px 20px rgba(244, 67, 54, 0.9);
+}
+
+#lap-btn {
+    background-color: #008CBA;
+    box-shadow: 0 4px 15px rgba(0, 140, 186, 0.7);
+}
+
+#lap-btn:hover {
+    background-color: #007B9E;
+    box-shadow: 0 8px 20px rgba(0, 140, 186, 0.9);
+}
+
+#laps {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#laps li {
+    color: #00f0ff;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+}
